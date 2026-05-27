@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maa Anaapoorna | Online Grocery Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo" onclick="window.location.href='index.html'">
+            <h2>Maa Anaapoorna</h2>
+            <span>SECTOR 52</span>
+        </div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">My Cart (<span class="cart-count">0</span>)</a></li>
+        </ul>
+        <a href="products.html" class="nav-btn">Shop Now</a>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <span class="mini-title">⚡ Express Delivery in Sector 53</span>
+            <h1>Your Trusted <br> Local Market</h1>
+            <p>Grocery, dairy, snacks, and daily essentials available at best prices. Free delivery above ₹2000!</p>
+            <div class="hero-buttons">
+                <a href="products.html" class="hero-btn">Explore Products</a>
+                <a href="cart.html" class="secondary-btn">View Cart</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="offer-banner">
+        <div class="offer-card green" onclick="window.location.href='products.html?cat=Grocery'">
+            <div class="offer-text">
+                <h2>Fresh Staples & Grocery</h2>
+                <p>Daily fresh products available at best prices.</p>
+                <button>Shop Now</button>
+            </div>
+            <img src="https://cdn-icons-png.flaticon.com/512/3194/3194766.png" alt="Groceries">
+        </div>
+
+        <div class="offer-card yellow" onclick="window.location.href='products.html?cat=Snacks'">
+            <div class="offer-text">
+                <h2>Snacks & Beverages</h2>
+                <p>Cold drinks, chips and snacks available.</p>
+                <button>Order Now</button>
+            </div>
+            <img src="https://cdn-icons-png.flaticon.com/512/2553/2553691.png" alt="Snacks">
+        </div>
+    </section>
+
+    <!-- 📁 CATEGORIES SECTION (LEFT-ALIGNED WITH SEE ALL LINK) -->
+    <section class="categories-section" style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; width:100%;">
+            <h2 class="section-title" style="text-align: left; margin: 0; font-size: 26px; font-weight: 700; color:#1e293b;">Shop by Categories</h2>
+            <a href="products.html" style="color: #e11d48; font-weight: 600; text-decoration: none; font-size: 15px; display: flex; align-items: center; gap: 4px;">See All ➔</a>
+        </div>
+        
+        <div class="categories-grid" id="homepageCategoriesContainer" style="display: flex; flex-wrap: wrap; gap: 18px; justify-content: flex-start; width: 100%;">
+            <p style="color:gray;">Loading categories...</p>
+        </div>
+    </section>
+
+    <!-- 💥 DEALS OF THE DAY ROW SECTION (LEFT ALIGNED WITH IMAGE + DISCOUNT PRICES) -->
+    <section class="deals-section" style="max-width: 1200px; margin: 0 auto; padding: 20px 20px 40px 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; width:100%;">
+            <h2 class="section-title" style="text-align: left; margin: 0; font-size: 26px; font-weight: 700; color:#1e293b;">💥 Hot Deals of the Day</h2>
+        </div>
+        
+        <div id="homepageHotDealsContainer" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: flex-start; width: 100%;">
+            <!-- Products with discount price and star rating cards render here -->
+        </div>
+    </section>
+
+    <!-- 🚚 WHY US INFO ROW -->
+    <section class="why-us" style="max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+        <div class="why-box" style="padding: 30px 25px; min-height: 140px; display: flex; flex-direction: column; justify-content: center;">
+            <h3 style="font-size: 20px; margin-bottom: 8px;">🚚 Fast Delivery</h3>
+            <p style="font-size: 14px; color: #64748b;">Quick service and easy WhatsApp ordering inside Sector 53.</p>
+        </div>
+        <div class="why-box" style="padding: 30px 25px; min-height: 140px; display: flex; flex-direction: column; justify-content: center;">
+            <h3 style="font-size: 20px; margin-bottom: 8px;">🥬 Fresh Products</h3>
+            <p style="font-size: 14px; color: #64748b;">Daily fresh grocery and dairy items restocked every morning.</p>
+        </div>
+        <div class="why-box" style="padding: 30px 25px; min-height: 140px; display: flex; flex-direction: column; justify-content: center;">
+            <h3 style="font-size: 20px; margin-bottom: 8px;">⭐ Best Pricing</h3>
+            <p style="font-size: 14px; color: #64748b;">Get unbeatable direct local vendor market rates seamlessly.</p>
+        </div>
+    </section>
+
+    <!-- 📍 LOWER INFO FOOTER STRIP -->
+    <section class="info-box" style="max-width: 1200px; margin: 40px auto; padding: 30px; min-height: 120px; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <div class="info-item" style="display: flex; align-items: center; gap: 15px;">
+            <div class="icon-circle" style="width: 55px; height: 55px; font-size: 24px; display: flex; align-items: center; justify-content: center;">📍</div>
+            <div class="text">
+                <h3 style="font-size: 18px; margin-bottom: 4px;">Visit Us</h3>
+                <p style="font-size: 14px;">Sector 52, Maa Anaapoorna, Noida</p>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="info-item" style="display: flex; align-items: center; gap: 15px;">
+            <div class="icon-circle" style="width: 55px; height: 55px; font-size: 24px; display: flex; align-items: center; justify-content: center;">🕒</div>
+            <div class="text">
+                <h3 style="font-size: 18px; margin-bottom: 4px;">Open Daily</h3>
+                <p style="font-size: 14px;">8 AM - 10 PM</p>
+            </div>
+        </div>
+    </section>
+
+    <a href="cart.html" class="whatsapp-btn">🛒</a>
+
+    <script src="script.js"></script>
+</body>
+</html>

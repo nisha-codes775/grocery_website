@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maa Anaapoorna | Product Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .detail-container { max-width: 1200px; margin: 40px auto; padding: 20px; display: flex; gap: 40px; flex-wrap: wrap; }
+        .detail-img-block { flex: 1; min-width: 300px; background: #fff; padding: 20px; border-radius: 12px; border: 1px solid #f1f5f9; text-align: center; }
+        .detail-img-block img { max-width: 100%; max-height: 400px; object-fit: contain; }
+        .detail-info-block { flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center; }
+        .detail-cat { font-size: 14px; text-transform: uppercase; color: #10b981; font-weight: 600; letter-spacing: 1px; margin-bottom: 8px; }
+        .detail-title { font-size: 32px; font-weight: 700; color: #1e293b; margin-bottom: 12px; line-height: 1.2; }
+        .detail-rating { display: flex; align-items: center; gap: 6px; margin-bottom: 15px; font-size: 16px; color: #f59e0b; font-weight: 600; }
+        .detail-price-box { margin-bottom: 25px; display: flex; align-items: center; gap: 15px; }
+        .detail-current-price { font-size: 28px; font-weight: 700; color: #1e293b; }
+        .detail-old-price { font-size: 18px; text-decoration: line-through; color: #94a3b8; }
+        .detail-save-badge { background: #dcfce7; color: #15803d; font-size: 13px; font-weight: 600; padding: 4px 10px; border-radius: 6px; }
+        .detail-action-btn { background: #10b981; color: #fff; border: none; padding: 15px 40px; font-size: 16px; font-weight: 600; border-radius: 8px; cursor: pointer; transition: background 0.2s; max-width: 250px; }
+        .detail-action-btn:hover { background: #059669; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo" onclick="window.location.href='index.html'">
+            <h2>Kondli Bazar</h2>
+            <span>SECTOR 53</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html">My Cart (<span class="cart-count">0</span>)</a></li>
+        </ul>
+        <a href="products.html" class="nav-btn">Shop Now</a>
+    </nav>
+
+    <!-- Detailed View Injector Target -->
+    <div class="detail-container" id="productDetailViewer">
+        <p style="color:gray; width:100%; text-align:center;">Loading complete product file matrix...</p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Trigger details initialization matrix instantly
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => { if (typeof window.renderProductSpecificDetailPage === 'function') window.renderProductSpecificDetailPage(); }, 300);
+        });
+    </script>
+</body>
+</html>

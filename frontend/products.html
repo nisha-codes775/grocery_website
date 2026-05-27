@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Products | Maa Anaapoorna</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="inner-nav">
+        <div class="logo" onclick="window.location.href='index.html'">
+            <h2>Maa Anaapoorna</h2>
+            <span>STORE</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="cart.html">Cart (<span class="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <div class="store-container">
+        
+        <div id="offerBannerContainer" style="margin-bottom: 20px; display: none;"></div>
+
+        <div class="control-panel">
+            <input type="text" id="searchBar" placeholder="🔍 Search fresh essentials...">
+            
+            <div class="filter-tabs" id="categoryFiltersContainer">
+                <p style="color: gray; font-size: 14px; padding: 5px;">Loading categories...</p>
+            </div>
+        </div>
+
+        <main class="products-grid" id="catalogGrid"></main>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

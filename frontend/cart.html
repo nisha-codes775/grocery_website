@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Maa Anaapoorna</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="inner-nav">
+        <div class="logo" onclick="window.location.href='index.html'">
+            <h2>Maa Anaapoorna</h2>
+            <span>CHECKOUT</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="cart.html" class="active">Cart (<span class="cart-count">0</span>)</a></li>
+        </ul>
+    </nav>
+
+    <div class="cart-wrapper">
+        <h1 class="section-title">Your Selected Basket</h1>
+        
+        <div class="cart-layout">
+            <div class="cart-items-section" id="cartContainer">
+                </div>
+
+            <div class="checkout-card">
+                <h3>Order Summary</h3>
+                <hr>
+                <div class="summary-row">
+                    <span>Items Subtotal</span>
+                    <span id="subtotalVal">₹0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery Charges</span>
+                    <span id="shippingVal">₹40</span>
+                </div>
+                <div class="delivery-incentive" id="incentiveMsg">
+                    Add ₹2,000 or more for Free Delivery!
+                </div>
+                <hr>
+                <div class="summary-row total">
+                    <span>Grand Total</span>
+                    <span id="grandTotalVal">₹0</span>
+                </div>
+
+                <div class="customer-details">
+                    <input type="text" id="custName" placeholder="Your Name" required>
+                    <textarea id="custAddress" placeholder="Complete Delivery Address (Sector 53...)" rows="3" required></textarea>
+                </div>
+
+                <button class="checkout-btn" id="whatsappCheckoutBtn">Send Order to WhatsApp 💬</button>
+                <a href="products.html" class="continue-shopping">← Continue Shopping</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

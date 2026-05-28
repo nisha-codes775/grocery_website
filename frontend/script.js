@@ -2,8 +2,8 @@
 let cart = JSON.parse(localStorage.getItem("KB_CART")) || [];
 const WHATSAPP_NUMBER = "9319719877"; // Replace with the owner's WhatsApp number
 
-// LIVE BACKEND API ROUTE ENGINE LINK
-const BACKEND_URL = "http://localhost:5000/api";
+// LIVE BACKEND API ROUTE ENGINE LINK (FIXED)
+const BACKEND_URL = "https://grocery-website-mjzd.onrender.com/api";
 
 // Yeh arrays database (MySQL) se dynamic load honge
 let products = [];

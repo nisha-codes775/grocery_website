@@ -89,9 +89,19 @@ app.delete('/api/admin/products/:id', (req, res) => {
 // ==========================================
 
 // 📁 FIXED: Send all category details including image_url
+// 📁 FIXED: Send all category details (With a backup if database is empty)
 app.get('/api/categories', (req, res) => {
     db.query('SELECT * FROM categories ORDER BY id DESC', (err, results) => {
         if (err) return res.status(500).json({ error: err.message });
+        
+        // AGAR DATABASE KHALI HAI, TOH DUMMY DATA BHEJO TAQI FRONTEND UNSTUCK HO JAYE
+        if (results.length === 0) {
+            return res.json([
+                { id: 1, name: "Fruits & Vegetables", image_url: "https://images.unsplash.com/photo-1610348725531-843dff563e2c" },
+                { id: 2, name: "Dairy & Bakery", image_url: "https://images.unsplash.com/photo-1528498033373-38d7a8e91353" }
+            ]);
+        }
+        
         res.json(results);
     });
 });
